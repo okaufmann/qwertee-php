@@ -1,0 +1,16 @@
+{
+    "name": "okaufmann/qwertee-php",
+    "description": "Simple client to access Qwertees (https://www.qwertee.com) todays and last chance tees",
+    "type": "library",
+    "require": {
+        "simplepie/simplepie": "^1.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Kaufmann",
+            "email": "okaufmann91@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
