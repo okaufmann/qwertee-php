@@ -10,6 +10,11 @@ matrix:
 
 sudo: false
 
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+
 install:
   - travis_retry composer install --no-interaction --prefer-source
 
