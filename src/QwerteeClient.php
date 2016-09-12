@@ -54,7 +54,7 @@ class QwerteeClient
     }
 
     /**
-     * Setup SimplePie
+     * Setup SimplePie.
      *
      * @param null $data Set feed data otherwise the official qwertee feed url will be used.
      */
