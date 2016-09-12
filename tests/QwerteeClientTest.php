@@ -22,7 +22,7 @@ class QwerteeClientTest extends AbstractTestCase
     protected function setUp()
     {
         self::$client = new QwerteeClient();
-        self::$client->initializeFeed(file_get_contents(__DIR__.'/data/rss.xml'));
+        self::$client->initializeFeed(file_get_contents(__DIR__ . '/data/rss.xml'));
     }
 
     public function testGetFeedItems()
@@ -35,16 +35,6 @@ class QwerteeClientTest extends AbstractTestCase
     {
         $items = self::$client->feedItems()->first();
 
-        /*
-        "title" => "A World of Dreams and Adventures"
-        "zoom" => "https://cdn.qwertee.com/images/designs/zoom/105195.jpg"
-        "mens" => "https://cdn.qwertee.com/images/designs/mens/105195.jpg"
-        "womens" => "https://cdn.qwertee.com/images/designs/womens/105195.jpg"
-        "kids" => "https://cdn.qwertee.com/images/designs/kids/105195.jpg"
-        "hoodie" => "https://cdn.qwertee.com/images/designs/hoodie/105195.jpg"
-        "sweater" => "https://cdn.qwertee.com/images/designs/sweater/105195.jpg"
-        */
-
         $this->assertArrayHasKey('title', $items);
         $this->assertArrayHasKey('zoom', $items);
         $this->assertArrayHasKey('mens', $items);
@@ -52,13 +42,15 @@ class QwerteeClientTest extends AbstractTestCase
         $this->assertArrayHasKey('kids', $items);
         $this->assertArrayHasKey('hoodie', $items);
         $this->assertArrayHasKey('sweater', $items);
+        $this->assertArrayHasKey('releasedAt', $items);
 
-        $this->assertTrue($items['title'] == 'A World of Dreams and Adventures');
-        $this->assertTrue($items['zoom'] == 'https://cdn.qwertee.com/images/designs/zoom/105195.jpg');
-        $this->assertTrue($items['mens'] == 'https://cdn.qwertee.com/images/designs/mens/105195.jpg');
-        $this->assertTrue($items['womens'] == 'https://cdn.qwertee.com/images/designs/womens/105195.jpg');
-        $this->assertTrue($items['kids'] == 'https://cdn.qwertee.com/images/designs/kids/105195.jpg');
-        $this->assertTrue($items['hoodie'] == 'https://cdn.qwertee.com/images/designs/hoodie/105195.jpg');
-        $this->assertTrue($items['sweater'] == 'https://cdn.qwertee.com/images/designs/sweater/105195.jpg');
+        $this->assertEquals('A World of Dreams and Adventures', $items['title']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/zoom/105195.jpg', $items['zoom']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/mens/105195.jpg', $items['mens']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/womens/105195.jpg', $items['womens']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/kids/105195.jpg', $items['kids']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/hoodie/105195.jpg', $items['hoodie']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/sweater/105195.jpg', $items['sweater']);
+        $this->assertEquals('2016-09-10', $items['releasedAt']);
     }
 }

@@ -53,6 +53,11 @@ class QwerteeClient
         return $list;
     }
 
+    /**
+     * Setup SimplePie
+     *
+     * @param null $data Set feed data otherwise the official qwertee feed url will be used.
+     */
     public function initializeFeed($data = null)
     {
         $this->client = new \SimplePie();
@@ -72,17 +77,18 @@ class QwerteeClient
         $dataItems = $feedItems->map(function (\SimplePie_Item $item) {
             $crawler = new Crawler($item->get_content());
             $zoom = $crawler->filter('img')->first()->attr('src');
+
+            $keys = collect(['title', 'zoom', 'mens', 'womens', 'kids', 'hoodie', 'sweater', 'releasedAt']);
+
             $title = $item->get_title();
-
-            $keys = collect(['title', 'zoom', 'mens', 'womens', 'kids', 'hoodie', 'sweater']);
-
             $mens = str_replace('zoom', 'mens', $zoom);
             $womens = str_replace('zoom', 'womens', $zoom);
             $kids = str_replace('zoom', 'kids', $zoom);
             $hoodie = str_replace('zoom', 'hoodie', $zoom);
             $sweater = str_replace('zoom', 'sweater', $zoom);
+            $releasedAt = $item->get_date('Y-m-d');
 
-            return $keys->combine([$title, $zoom, $mens, $womens, $kids, $hoodie, $sweater]);
+            return $keys->combine([$title, $zoom, $mens, $womens, $kids, $hoodie, $sweater, $releasedAt]);
         });
 
         return $dataItems;

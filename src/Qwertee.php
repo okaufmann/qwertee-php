@@ -21,7 +21,7 @@ class Qwertee
     private static $client = null;
 
     /**
-     *  Get Todays qwertee tees.
+     * Get Todays qwertee tees.
      *
      * @return Collection
      */
@@ -40,11 +40,17 @@ class Qwertee
         return self::getNextThreeItems();
     }
 
+    /**
+     * @return Collection
+     */
     public static function getFirstThreeItems()
     {
         return self::getClient()->feedItems()->take(3)->values();
     }
 
+    /**
+     * @return Collection
+     */
     public static function getNextThreeItems()
     {
         return self::getClient()->feedItems()->slice(3)->take(3)->values();
@@ -85,6 +91,9 @@ class Qwertee
         self::$client = $client;
     }
 
+    /**
+     * @return QwerteeClient
+     */
     public static function getClient()
     {
         if (self::$client == null) {
