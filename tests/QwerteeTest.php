@@ -16,7 +16,7 @@ use Okaufmann\Qwertee\QwerteeClient;
 
 class QwerteeTest extends AbstractTestCase
 {
-    public static function setUpBeforeClass()
+    protected function setUp()
     {
         $client = new QwerteeClient();
         $client->initializeFeed(file_get_contents(__DIR__.'/data/rss.xml'));
