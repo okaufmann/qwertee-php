@@ -1,5 +1,6 @@
 # qwertee-php
 [![Build Status](https://travis-ci.org/okaufmann/qwertee-php.svg?branch=master)](https://travis-ci.org/okaufmann/qwertee-php)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/okaufmann/qwertee-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/okaufmann/qwertee-php/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/okaufmann/qwertee-php/v/stable)](https://packagist.org/packages/okaufmann/qwertee-php)
 [![Total Downloads](https://poser.pugx.org/okaufmann/qwertee-php/downloads)](https://packagist.org/packages/okaufmann/qwertee-php)
 [![Latest Unstable Version](https://poser.pugx.org/okaufmann/qwertee-php/v/unstable)](https://packagist.org/packages/okaufmann/qwertee-php)
