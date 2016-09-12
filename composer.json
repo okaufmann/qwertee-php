@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "php": "^7.0",
         "simplepie/simplepie": "^1.4",
         "illuminate/support": "5.*",
         "symfony/dom-crawler": "3.1.*",
