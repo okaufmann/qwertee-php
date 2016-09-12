@@ -1,16 +1,14 @@
 <?php
 /**
- * QwerteeClient.php, qwertee-php
+ * QwerteeClient.php, qwertee-php.
  *
  * This File belongs to to Project qwertee-php
  *
  * @author Oliver Kaufmann <okaufmann91@gmail.com>
+ *
  * @version 1.0
- * @package YOUREOACKAGE
  */
-
 namespace Okaufmann\Qwertee;
-
 
 use Illuminate\Support\Collection;
 use Symfony\Component\DomCrawler\Crawler;
@@ -33,7 +31,7 @@ class QwerteeClient
     }
 
     /**
-     * Returns the actual feed items ordered by newest to oldest
+     * Returns the actual feed items ordered by newest to oldest.
      *
      * @return \Illuminate\Support\Collection
      */
@@ -47,14 +45,13 @@ class QwerteeClient
             ->sortBy(function (\SimplePie_Item $item, $key) {
                 return $item->get_title();
             })->sortByDesc(function (\SimplePie_Item $item, $key) {
-                return $item->get_date("Ymd");
+                return $item->get_date('Ymd');
             });
 
         $list = $this->extractData($list);
 
         return $list;
     }
-
 
     public function initializeFeed($data = null)
     {

@@ -11,9 +11,7 @@
 namespace Okaufmann\Tests\Qwertee;
 
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
-use Vendor\Package\YourPackageServiceProvider;
 
 abstract class AbstractTestCase extends AbstractPackageTestCase
 {
-
 }

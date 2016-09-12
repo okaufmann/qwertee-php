@@ -19,7 +19,7 @@ class QwerteeTest extends AbstractTestCase
     public static function setUpBeforeClass()
     {
         $client = new QwerteeClient();
-        $client->initializeFeed(file_get_contents(__DIR__ . '/data/rss.xml'));
+        $client->initializeFeed(file_get_contents(__DIR__.'/data/rss.xml'));
         Qwertee::setClient($client);
     }
 
@@ -77,7 +77,6 @@ class QwerteeTest extends AbstractTestCase
 
     public function testGetTodaysTeesAtReleaseTime()
     {
-
         Carbon::setTestNow(
             Carbon::create(2016, 9, 10, 23, 0, 0)
         );
