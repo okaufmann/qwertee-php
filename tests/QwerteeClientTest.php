@@ -1,14 +1,13 @@
 <?php
 /**
- * QwerteeClientTest.php, qwertee-php
+ * QwerteeClientTest.php, qwertee-php.
  *
  * This File belongs to to Project qwertee-php
  *
  * @author Oliver Kaufmann <okaufmann91@gmail.com>
+ *
  * @version 1.0
- * @package YOUREOACKAGE
  */
-
 namespace Okaufmann\Tests\Qwertee;
 
 use Okaufmann\Qwertee\QwerteeClient;
@@ -23,7 +22,7 @@ class QwerteeClientTest extends AbstractTestCase
     protected function setUp()
     {
         self::$client = new QwerteeClient();
-        self::$client->initializeFeed(file_get_contents(__DIR__ . '/data/rss.xml'));
+        self::$client->initializeFeed(file_get_contents(__DIR__.'/data/rss.xml'));
     }
 
     public function testGetFeedItems()

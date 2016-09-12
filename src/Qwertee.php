@@ -1,16 +1,14 @@
 <?php
 /**
- * Qwertee.php, qwertee-php
+ * Qwertee.php, qwertee-php.
  *
  * This File belongs to to Project qwertee-php
  *
  * @author Oliver Kaufmann <okaufmann91@gmail.com>
+ *
  * @version 1.0
- * @package YOUREOACKAGE
  */
-
 namespace Okaufmann\Qwertee;
-
 
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
@@ -23,7 +21,7 @@ class Qwertee
     private static $client = null;
 
     /**
-     *  Get Todays qwertee tees
+     *  Get Todays qwertee tees.
      *
      * @return Collection
      */
@@ -33,7 +31,7 @@ class Qwertee
     }
 
     /**
-     * Get last chance tees
+     * Get last chance tees.
      *
      * @return Collection
      */
