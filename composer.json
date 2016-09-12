@@ -12,6 +12,7 @@
     "require": {
         "simplepie/simplepie": "^1.4",
         "illuminate/support": "5.*",
+        "symfony/dom-crawler": "3.1.*",
         "nesbot/carbon": "^1.21"
     },
     "require-dev": {
