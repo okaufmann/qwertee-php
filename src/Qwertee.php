@@ -102,7 +102,6 @@ class Qwertee
             self::setClient($qClient);
         }
 
-
         return self::$client;
     }
 }
