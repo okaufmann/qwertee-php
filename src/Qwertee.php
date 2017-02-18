@@ -8,6 +8,7 @@
  *
  * @version 1.0
  */
+
 namespace Okaufmann\Qwertee;
 
 use Carbon\Carbon;
