@@ -9,7 +9,7 @@
  * @version 1.0
  */
 
-namespace Okaufmann\Qwertee;
+namespace Okaufmann\QwerteePhp;
 
 use Illuminate\Support\Collection;
 use Symfony\Component\DomCrawler\Crawler;

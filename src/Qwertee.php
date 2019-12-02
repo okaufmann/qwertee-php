@@ -9,7 +9,7 @@
  * @version 1.0
  */
 
-namespace Okaufmann\Qwertee;
+namespace Okaufmann\QwerteePhp;
 
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
