@@ -10,12 +10,11 @@
 Simple client to access [Qwertees](https://www.qwertee.com) todays and last chance tees
 
 ## Installation
-PHP 7.0+ required. Although [Components of Laravel](https://github.com/mattstauffer/Torch) were used, Laravel itself is not required.
 
-To get the latest version of Package, simply require the project using [Composer](https://getcomposer.org):
+You can install the package via composer:
 
 ```bash
-$ composer require okaufmann/qwertee-php
+composer require okaufmann/qwertee-php
 ```
 
 ## Usage
@@ -23,7 +22,7 @@ $ composer require okaufmann/qwertee-php
 This Package basically provide the following two methods.
 
 ```php
-using Okaufmann\Qwertee\Qwertee
+using Okaufmann\QwerteePhp\Qwertee
 
 class HomeController
 {
@@ -31,13 +30,13 @@ class HomeController
     public function index()
     {
         $today = Qwertee::today();
-        
+
         $lastChance = Qwertee::lastChance();
     }
 }
 ```
 
-The Tees will be returned as a [Laravel Collection](https://laravel.com/docs/5.3/collections) like the following:
+The Tees will be returned as a [Laravel Collection](https://laravel.com/docs/collections) like the following:
 
 ```php
 [
@@ -57,10 +56,14 @@ The Tees will be returned as a [Laravel Collection](https://laravel.com/docs/5.3
 
 ```
 
-##### Further Information
+## Credits
 
-There are other classes in this package that are not documented here. This is because they are not intended for public use and are used internally by this package.
+- [Oliver Kaufmann](https://github.com/okaufmann)
+- [All Contributors](../../contributors)
 
 ## License
 
-This project and the Laravel framework are open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+
+This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
