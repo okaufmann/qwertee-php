@@ -19,6 +19,7 @@
         "php": "^7.1",
         "illuminate/support": "5.8.*|^6.0",
         "simplepie/simplepie": "^1.5",
+        "symfony/css-selector": "^5.0",
         "symfony/dom-crawler": "^5.0"
     },
     "require-dev": {
