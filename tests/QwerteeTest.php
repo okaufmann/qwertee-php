@@ -8,15 +8,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Okaufmann\Tests\Qwertee;
+namespace Okaufmann\QwerteePhp\Tests;
 
 use Carbon\Carbon;
-use Okaufmann\Qwertee\Qwertee;
-use Okaufmann\Qwertee\QwerteeClient;
+use Okaufmann\QwerteePhp\Qwertee;
+use Okaufmann\QwerteePhp\QwerteeClient;
+use PHPUnit\Framework\TestCase;
 
-class QwerteeTest extends AbstractTestCase
+class QwerteeTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $client = new QwerteeClient();
         $client->initializeFeed(file_get_contents(__DIR__.'/data/rss.xml'));

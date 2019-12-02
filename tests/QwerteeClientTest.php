@@ -9,18 +9,19 @@
  * @version 1.0
  */
 
-namespace Okaufmann\Tests\Qwertee;
+namespace Okaufmann\QwerteePhp\Tests;
 
-use Okaufmann\Qwertee\QwerteeClient;
+use Okaufmann\QwerteePhp\QwerteeClient;
+use PHPUnit\Framework\TestCase;
 
-class QwerteeClientTest extends AbstractTestCase
+class QwerteeClientTest extends TestCase
 {
     /**
      * @var QwerteeClient
      */
     private static $client;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         self::$client = new QwerteeClient();
         self::$client->initializeFeed(file_get_contents(__DIR__.'/data/rss.xml'));
