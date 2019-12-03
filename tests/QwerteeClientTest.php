@@ -46,13 +46,13 @@ class QwerteeClientTest extends TestCase
         $this->assertArrayHasKey('sweater', $items);
         $this->assertArrayHasKey('releasedAt', $items);
 
-        $this->assertEquals('A World of Dreams and Adventures', $items['title']);
-        $this->assertEquals('https://cdn.qwertee.com/images/designs/zoom/105195.jpg', $items['zoom']);
-        $this->assertEquals('https://cdn.qwertee.com/images/designs/mens/105195.jpg', $items['mens']);
-        $this->assertEquals('https://cdn.qwertee.com/images/designs/womens/105195.jpg', $items['womens']);
-        $this->assertEquals('https://cdn.qwertee.com/images/designs/kids/105195.jpg', $items['kids']);
-        $this->assertEquals('https://cdn.qwertee.com/images/designs/hoodie/105195.jpg', $items['hoodie']);
-        $this->assertEquals('https://cdn.qwertee.com/images/designs/sweater/105195.jpg', $items['sweater']);
-        $this->assertEquals('2016-09-10', $items['releasedAt']);
+        $this->assertEquals('liquid space', $items['title']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/product-thumbs/1574940810-155719-zoom-500x600.jpg', $items['zoom']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/product-thumbs/1574940810-155719-mens-500x600.jpg', $items['mens']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/product-thumbs/1574940810-155719-womens-500x600.jpg', $items['womens']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/product-thumbs/1574940810-155719-kids-500x600.jpg', $items['kids']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/product-thumbs/1574940810-155719-hoodie-500x600.jpg', $items['hoodie']);
+        $this->assertEquals('https://cdn.qwertee.com/images/designs/product-thumbs/1574940810-155719-sweater-500x600.jpg', $items['sweater']);
+        $this->assertEquals('2019-12-02', $items['releasedAt']);
     }
 }
