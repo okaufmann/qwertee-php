@@ -1,4 +1,4 @@
-# qwertee-php
+# Qwertee Client
 [![Build Status](https://travis-ci.org/okaufmann/qwertee-php.svg?branch=master)](https://travis-ci.org/okaufmann/qwertee-php)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/okaufmann/qwertee-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/okaufmann/qwertee-php/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/okaufmann/qwertee-php/v/stable)](https://packagist.org/packages/okaufmann/qwertee-php)
@@ -7,7 +7,7 @@
 [![License](https://poser.pugx.org/okaufmann/qwertee-php/license)](https://packagist.org/packages/okaufmann/qwertee-php)
 
 
-Simple client to access [Qwertees](https://www.qwertee.com) todays and last chance tees
+Simple client to access [Qwertee](https://www.qwertee.com) todays and last chance tees
 
 ## Installation
 
