@@ -9,7 +9,7 @@
  * @version 1.0
  */
 
-namespace Okaufmann\Qwertee;
+namespace Okaufmann\QwerteePhp;
 
 use Illuminate\Support\Collection;
 use Symfony\Component\DomCrawler\Crawler;
@@ -77,16 +77,16 @@ class QwerteeClient
     {
         $dataItems = $feedItems->map(function (\SimplePie_Item $item) {
             $crawler = new Crawler($item->get_content());
-            $zoom = $crawler->filter('img')->first()->attr('src');
+            $mens = $crawler->filter('img')->first()->attr('src');
 
             $keys = collect(['title', 'zoom', 'mens', 'womens', 'kids', 'hoodie', 'sweater', 'releasedAt']);
 
             $title = $item->get_title();
-            $mens = str_replace('zoom', 'mens', $zoom);
-            $womens = str_replace('zoom', 'womens', $zoom);
-            $kids = str_replace('zoom', 'kids', $zoom);
-            $hoodie = str_replace('zoom', 'hoodie', $zoom);
-            $sweater = str_replace('zoom', 'sweater', $zoom);
+            $zoom = str_replace('mens', 'zoom', $mens);
+            $womens = str_replace('mens', 'womens', $mens);
+            $kids = str_replace('mens', 'kids', $mens);
+            $hoodie = str_replace('mens', 'hoodie', $mens);
+            $sweater = str_replace('mens', 'sweater', $mens);
             $releasedAt = $item->get_date('Y-m-d');
 
             return $keys->combine([$title, $zoom, $mens, $womens, $kids, $hoodie, $sweater, $releasedAt]);

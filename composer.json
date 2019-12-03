@@ -1,36 +1,46 @@
 {
     "name": "okaufmann/qwertee-php",
     "description": "Simple client to access Qwertees (https://www.qwertee.com) todays and last chance tees",
-    "type": "library",
+    "keywords": [
+        "okaufmann",
+        "qwertee-php"
+    ],
+    "homepage": "https://github.com/okaufmann/qwertee-php",
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "Oliver Kaufmann",
-            "email": "okaufmann91@gmail.com"
+            "email": "okaufmann91@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.0",
-        "simplepie/simplepie": "^1.4",
-        "illuminate/support": "5.*",
-        "symfony/dom-crawler": "3.1.*",
-        "symfony/css-selector": "3.1.*",
-        "nesbot/carbon": "^1.21"
+        "php": "^7.1",
+        "illuminate/support": "5.8.*|^6.0",
+        "simplepie/simplepie": "^1.5.3",
+        "symfony/css-selector": "^5.0",
+        "symfony/dom-crawler": "^5.0"
     },
     "require-dev": {
-        "graham-campbell/testbench": "^3.1",
-        "mockery/mockery": "^0.9.4",
-        "phpunit/phpunit": "^4.8|^5.0"
+        "phpunit/phpunit": "^8.0"
     },
     "autoload": {
         "psr-4": {
-            "Okaufmann\\Qwertee\\": "src/"
+            "Okaufmann\\QwerteePhp\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Okaufmann\\Tests\\Qwertee\\": "tests/"
+            "Okaufmann\\QwerteePhp\\Tests\\": "tests"
         }
     },
-    "minimum-stability": "stable"
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
 }
