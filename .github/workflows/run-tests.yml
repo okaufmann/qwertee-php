@@ -1,4 +1,4 @@
-ame: run-tests
+name: run-tests
 
 on: [push, pull_request]
 
